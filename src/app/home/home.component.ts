@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       }, 1000);
     })
 
-    this.observableSubscription =     customObservable.pipe(filter((data: number): boolean => {
+    this.observableSubscription = customObservable.pipe(filter((data: number): boolean => {
       return data > 0;
     }),map((data: number): string => {
       return `Round: ${data + 1}`;
